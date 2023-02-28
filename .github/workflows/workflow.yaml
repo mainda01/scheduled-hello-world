@@ -1,0 +1,17 @@
+name: scheduled-trigger
+
+# Action will run on pushes to a lifecycle environment branch.
+# Can be manually triggered but will only run on lifecycle environments
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # every 5 min
+    # - cron: "0 8 * * 0" # 8AM GMT(3AM EST) every Sunday
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo hello
+        run: echo "Hello World!"
