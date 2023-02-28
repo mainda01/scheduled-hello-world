@@ -4,8 +4,6 @@ name: scheduled-trigger
 # Can be manually triggered but will only run on lifecycle environments
 
 on:
-  schedule:
-    - cron: '*/5 * * * *' # every min
   workflow_dispatch:
 
 jobs:
