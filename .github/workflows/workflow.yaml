@@ -5,7 +5,7 @@ name: scheduled-trigger
 
 on:
   schedule:
-    - cron: "*/1 * * * *" # every 5 min
+    - cron: '*/1 * * * *' # every min
     # - cron: "0 8 * * 0" # 8AM GMT(3AM EST) every Sunday
   workflow_dispatch:
 
