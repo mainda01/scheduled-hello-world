@@ -1,8 +1,8 @@
 name: scheduled-trigger
 
 on:
-  schedule:
-    - cron: "*/5 * * * *" # every min
+#   schedule:
+#     - cron: "*/5 * * * *" # every min
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
   steps:
   - run: echo "Job 2"
   - name: Wait 1 minute
-    uses: jakejarvis/wait-action@v2.1.0
+    uses: jakejarvis/wait-action@master
     with:
       time: '1m'
 
@@ -27,6 +27,6 @@ jobs:
   steps:
     - run: echo "Job 3"
     - name: Wait 2 minutes
-      uses: jakejarvis/wait-action@v2.1.0
+      uses: jakejarvis/wait-action@master
       with:
         time: '2m'
